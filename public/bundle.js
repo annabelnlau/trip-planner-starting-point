@@ -537,16 +537,31 @@ module.exports={"$version":8,"$root":{"version":{"required":true,"type":"enum","
 const mapboxgl = __webpack_require__(0);
 const buildMarker = __webpack_require__(3);
 
+<<<<<<< HEAD
 mapboxgl.accessToken = "YOUR API TOKEN HERE";
 
 const map = new mapboxgl.Map({
   container: "map",
   center: [-74.009, 40.705], // FullStack coordinates
+=======
+mapboxgl.accessToken = 'pk.eyJ1IjoiZW1nb3Jkb24xNTQiLCJhIjoiY2phOXVmNGk5MGt0eDMycXVweWEybmVrciJ9.Q310T3dOqbZ8ctXakShBWQ';
+
+const fullstackCoords = [-74.009, 40.705] // NY
+// const fullstackCoords = [-87.6320523, 41.8881084] // CHI
+
+const map = new mapboxgl.Map({
+  container: "map",
+  center: fullstackCoords, // FullStack coordinates
+>>>>>>> 8fc4f31781500051eeb4843872134bd92b7f6c0d
   zoom: 12, // starting zoom
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
 
+<<<<<<< HEAD
 const marker = buildMarker("activities", [-74.009, 40.705]);
+=======
+const marker = buildMarker("activities", fullstackCoords);
+>>>>>>> 8fc4f31781500051eeb4843872134bd92b7f6c0d
 marker.addTo(map);
 
 
